@@ -24,12 +24,13 @@ header{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    text-align: center;
-    padding-top: 100px;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
     font-size: 30px;
     position: relative;
-    
-
 }
 header a{   
     position: absolute;
@@ -39,12 +40,8 @@ header a{
     justify-content: center;
     width: 100%;
 }
-header div {
-    padding-top: 100px;
-}
 
-
-@media (max-width:400px) 
+@media (max-width:670px) 
  {h1  :nth-child(2){display: none}
  h1 :nth-child(5){display: none;} 
  h1 :nth-child(3){display: none;}}
@@ -55,14 +52,12 @@ header div {
     width: 300px;
     height: 300px;
     border-radius: 10px;
-    margin-left: 37px;
     background-image: url("été.png");
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
- 
-
+    animation : myAnim 3s allégé 0s  1 alterné vers l'avant ;
     
 }
 
@@ -70,15 +65,12 @@ header div {
     flex-direction: column;
     
 }
-
-
 #section-2 a{
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     bottom: 0px;
-
 }
 #section-1 a{
         display: flex;
@@ -87,8 +79,6 @@ header div {
         justify-content: center;
         position: relative;
 }
-
-
 #section-2 div div div{
     box-shadow: -1px 1px 10px 3px inset;
     width: 150px;
@@ -97,19 +87,13 @@ header div {
     background-color: rgb(227, 228, 215);
     margin: 15px;   
 }
-
-
 #footer{
     text-align: center;
     height: 200px;
     background-color: rgb(180, 134, 36);
     display: flex;
     align-items: center;
-    justify-content: center;
-    
-    
-
-    
+    justify-content: center;   
 }
 #grid{
         
@@ -142,11 +126,116 @@ header div {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-       
+        
     }
+    
+       
+
+@media screen and (min-width: 700px)
+{
+    h1 :nth-child(2){display: none}
+    h1 :nth-child(5){display: inline}
+    h1 :nth-child(3){display: inline}
+
+}
+h1{
+
+ text-align: left;
+
+}
+
+@media screen and (min-width: 768px)
+{ header{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+   
+}
+
+
+#section-1{
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+
+}
+#grid div{
+    display:grid;
+    place-items: center stretch;
+    
+}
+
+   
+}
+@media screen and (max-width: 1024px);
+{
+    #section-1{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        
+        
+    }
+}
+@keyframes été{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 5;
+    }}
+
+@keyframes plage {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#section-1 div:nth-child(2):hover {
+    animation-name: plage;
+    animation-delay: 0ms;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+#section-1 div:nth-child(1):hover {
+    animation-name: été;
+    animation-delay: 0ms;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+
+}
+#section-2 div div:hover {
+    transition-duration: 500ms;
+    transform: scale(1.1);
+}
+#section-2 div div:hover div{
+    transition-delay: 500ms;
+    transform: rotate(360deg);
+    transition-duration: 300ms;
+
+
+}
+
+   
 
     
-@media screen and (max-width: 400px)orientation:landscape){
+
+    
+
+
+
+   
+    
+
+
    
     
 
@@ -154,7 +243,7 @@ header div {
       
     
         
-    }
+    
 
     
     
