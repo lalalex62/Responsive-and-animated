@@ -24,14 +24,12 @@ header{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
-   
     font-size: 30px;
     position: relative;
 }
+
 header a{   
     position: absolute;
     bottom: 0px;
@@ -41,8 +39,9 @@ header a{
     width: 100%;
 }
 
-@media (max-width:670px) 
- {h1  :nth-child(2){display: none}
+
+@media (max-width:375px) 
+ {h1  :nth-child(2){display: none;}
  h1 :nth-child(5){display: none;} 
  h1 :nth-child(3){display: none;}}
 
@@ -57,7 +56,7 @@ header a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation : myAnim 3s allégé 0s  1 alterné vers l'avant ;
+   
     
 }
 
@@ -77,7 +76,8 @@ header a{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        position: relative;
+        position: absolute;
+        bottom: 0px;
 }
 #section-2 div div div{
     box-shadow: -1px 1px 10px 3px inset;
@@ -120,6 +120,7 @@ header a{
         flex-wrap: wrap;
         justify-content: center;
         position: relative;
+        height: 100vh;
     }
     #section-1 {
         display: flex;
@@ -127,15 +128,13 @@ header a{
         align-items: center;
         justify-content: center;
         
-    }
-    
-       
+    }     
 
-@media screen and (min-width: 700px)
+@media screen and (max-width: 700px)
 {
     h1 :nth-child(2){display: none}
-    h1 :nth-child(5){display: inline}
-    h1 :nth-child(3){display: inline}
+    h1 :nth-child(5){display: none}
+ 
 
 }
 h1{
@@ -143,45 +142,18 @@ h1{
  text-align: left;
 
 }
-
 @media screen and (min-width: 768px)
-{ header{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-   
-}
-
-
-#section-1{
-    display: flex;
-    
-    flex-direction: row;
-    align-items: center;
-
-}
-#grid div{
-    display:grid;
-    place-items: center stretch;
-    
-}
-
-   
-}
-@media screen and (max-width: 1024px);
 {
-    #section-1{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        align-items: center;
-        text-align: center;
-        
-        
-    }
+    h1 :nth-child(2){display: none}
+    h1 :nth-child(5){display: inline}
+    h1 :nth-child(3){display: none}
+    
+
 }
-@keyframes été{
+
+
+
+@keyframes ete{
     from {
         opacity: 0;
     }
@@ -220,9 +192,115 @@ h1{
     transition-delay: 500ms;
     transform: rotate(360deg);
     transition-duration: 300ms;
+}
 
+@media(min-width:768px)
+{
+    #section-1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+    #section-1 a{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        bottom:0px;
+       
+       
+       
+    
+    }
+    #section-2 a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        bottom: 0px;
+    }
+
+    #section-2 #grid {
+        display: grid;
+        grid-template-columns: repeat(3, 5fr);
+        grid-auto-rows: 3;
+    }
+    #grid div:nth-child(1) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    #grid div:nth-child(2) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #grid div:nth-child(3) {
+        grid-column: 4;
+        grid-row: 2;
+    }
+    #grid div:nth-child(4) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #grid div:nth-child(5) {
+        grid-column: 3;
+        grid-row: 3;
+    }
+    #grid div:nth-child(6) {
+        grid-column: 5;
+        grid-row: 3;
+    }
 
 }
+
+@media(min-width:1024px)
+{
+    #section-1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+
+}
+
+header{ display: flex;
+flex-direction: row;
+height: 100vh;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+font-size: 30px;
+position: relative;
+
+}
+}
+    
+@media(min-width:1440px)
+
+{
+h1 :nth-child(3){display: contents;}
+h1 :nth-child(2){display: contents;}
+}
+header{
+    
+    display: flex;
+    
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+    font-size: 30px;
+    position: relative;
+}
+
+
+    
+
+
+
 
    
 
